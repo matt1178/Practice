@@ -72,6 +72,7 @@
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // pictureBox
             // 
@@ -89,7 +90,6 @@
             this.answerBox1.TabIndex = 2;
             this.answerBox1.Text = "?";
             this.answerBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.answerBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // answerBox2
             // 
