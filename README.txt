@@ -1,6 +1,6 @@
-These files were created by Microsoft Visual Studio C# 2010 Express. It's free and doesn't suck, you should look into it. We should definitely get on the same code platform (I'm open to suggestions if any of you prefer something different) to streamline things.
+This project is a practice for whenever it is that we start making mods for Space Station 13. The main goal is to get Git set up, make sure everyone knows how to edit the project, and asses the coding ability of everyone on the team. The way we're going to do this is a little C# hangman game. It is being made in Microsoft Visual C# 2010 Express (so download that if you don't have it).
 
-Also, add your name at the end of this so I know you can get into the repository correctly.
--h3half
--ponyxslaystation
--
+Add your name to the end of this file to confirm that you're able to make changes. Have questions? Join us in #spacestation13 on irc.synirc.net.
+
+h3half
+ponyxslaystation
