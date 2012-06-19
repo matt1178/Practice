@@ -47,12 +47,20 @@ namespace WindowsFormsApplication1
         {
             int random;
 
+            answerBox1.Text = "?"; //This resets the boxes to question marks. Just in case someone was playing a game and starts a new one -h3
+            answerBox2.Text = "?";
+            answerBox3.Text = "?";
+            answerBox4.Text = "?";
+            answerBox5.Text = "?";
+
             pictureBox.Image = WindowsFormsApplication1.Properties.Resources.zeroW; //Setting the picturebox to the "zerowrong" image -h3
 
             random = randomInt(1, 10); //Getting a random number for the word -h3
 
             wordSwitch(random); //Sending the word-choosing somewhere else because that's one giant switch statement -h3
-            //-*-*-*-If anyone has a better way of doing this please please share it-*-*-*-
+            //-*-*-*-If anyone has a better way of doing this please please share it-*-*-*-    -h3
+
+            
         }
 
         void wordSwitch(int switchInt)
@@ -172,5 +180,69 @@ namespace WindowsFormsApplication1
                     }
             }
         }
+        /*
+        //Using this to test my new class. No touchy please -h3
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            Main startGame = Main();
+        }
+    }
+
+
+    //I'm testing something with this class. No touchy please -h3
+    static class Main
+    {
+        public static void startGame()
+        {
+            int randomNum = randomGen(1, 2);
+
+            getWord(randomNum);
+        }
+
+        public static int randomGen(int i1, int i2)
+        {
+            int wordSeed;
+
+            System.Random RandNum = new System.Random();
+            wordSeed = RandNum.Next(i1, i2);
+
+            return wordSeed;
+        }
+
+        public static void getWord(int seed)
+        {
+            char a1;
+            char a2;
+            char a3;
+            char a4;
+            char a5;
+
+            switch (seed)
+            {
+                case 1:
+                    {
+                        a1 = 'W';
+                        a2 = 'O';
+                        a3 = 'R';
+                        a4 = 'D';
+                        a5 = '1';
+                        break;
+                    }
+                case 2:
+                    {
+                        a1 = 'W';
+                        a2 = 'O';
+                        a3 = 'R';
+                        a4 = 'D';
+                        a5 = '2';
+                        break;
+                    }
+                default:
+                    {
+                        MessageBox.Show("Something broke. :(", "Error");
+                        break;
+                    }
+            }
+        }*/
     }
 }

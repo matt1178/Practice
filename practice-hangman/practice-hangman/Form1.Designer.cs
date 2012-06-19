@@ -61,6 +61,7 @@
             this.zButton = new System.Windows.Forms.Button();
             this.xButton = new System.Windows.Forms.Button();
             this.yButton = new System.Windows.Forms.Button();
+            this.testButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -362,11 +363,21 @@
             this.yButton.Text = "Y";
             this.yButton.UseVisualStyleBackColor = true;
             // 
+            // testButton
+            // 
+            this.testButton.Location = new System.Drawing.Point(144, 154);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(47, 23);
+            this.testButton.TabIndex = 33;
+            this.testButton.Text = "test";
+            this.testButton.UseVisualStyleBackColor = true;
+            // 
             // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 221);
+            this.Controls.Add(this.testButton);
             this.Controls.Add(this.yButton);
             this.Controls.Add(this.xButton);
             this.Controls.Add(this.zButton);
@@ -443,6 +454,7 @@
         private System.Windows.Forms.Button zButton;
         private System.Windows.Forms.Button xButton;
         private System.Windows.Forms.Button yButton;
+        private System.Windows.Forms.Button testButton;
     }
 }
 
