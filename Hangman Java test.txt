@@ -1,0 +1,303 @@
+import java.io.*;
+import java.util.Random;
+public class HangmanDOS{
+	
+	public static String GetString(){
+		String temp="";
+		InputStreamReader input=new InputStreamReader(System.in);
+		BufferedReader reader=new BufferedReader(input);
+		try{
+		temp=reader.readLine();
+		}
+		catch(Exception e){
+		}
+		return temp;
+	
+	}//GetString
+	
+	public static int GetInt(){
+		String temp="";
+		int tempint=0;
+		InputStreamReader input=new InputStreamReader(System.in);
+		BufferedReader reader=new BufferedReader(input);
+		try{
+		temp=reader.readLine();
+		}
+		catch(Exception e){
+		}
+		tempint=Integer.parseInt(temp);
+		return tempint;
+	}//GetInt
+	
+	public static double GetDub(){
+		String temp="";
+		double tempdub=0.0;
+		InputStreamReader input=new InputStreamReader(System.in);
+		BufferedReader reader=new BufferedReader(input);
+		try{
+		temp=reader.readLine();
+		}
+		catch(Exception e){
+		}
+		tempdub=Double.parseDouble(temp);
+		return tempdub;
+	}//GetDub
+	
+	public static void ChangeArray(char p[],String phrases, String guess){
+		int i=0;
+		for(int x=0; x<phrases.length();x=i+1){
+			i=phrases.indexOf(guess,x);
+		if(i>=0){
+			p[i]=guess.charAt(0);
+			}
+			else{
+				break;
+			}
+		}
+	}//ChangeArray
+	
+
+	public static void main(String args[]){
+		String choice="y";
+		String phrases[]=new String[6];
+		int tries=6;
+		Random generator = new Random();
+		int r=generator.nextInt(6);
+		boolean winner=true;
+		String guess="";
+		int i=0;
+		char alpha[]=new char[26];
+		phrases[0]="word";
+		phrases[1]="words";
+		phrases[2]="lag";
+		phrases[3]="space";
+		phrases[4]="space cats";
+		phrases[5]="flying space cats";
+		
+		alpha[0]='a';
+		alpha[1]='b';
+		alpha[2]='c';
+		alpha[3]='d';
+		alpha[4]='e';
+		alpha[5]='f';
+		alpha[6]='g';
+		alpha[7]='h';
+		alpha[8]='i';
+		alpha[9]='j';
+		alpha[10]='k';
+		alpha[11]='l';
+		alpha[12]='m';
+		alpha[13]='n';
+		alpha[14]='o';
+		alpha[15]='p';
+		alpha[16]='q';
+		alpha[17]='r';
+		alpha[18]='s';
+		alpha[19]='t';
+		alpha[20]='u';
+		alpha[21]='v';
+		alpha[22]='w';
+		alpha[23]='x';
+		alpha[24]='y';
+		alpha[25]='z';
+		
+		
+		while(choice.equalsIgnoreCase("yes")||choice.equalsIgnoreCase("y")){
+		r=generator.nextInt(6);
+		
+		System.out.println("//phrase is "+phrases[r]);
+			
+				
+			
+		
+	
+			
+			char p[]=phrases[r].toCharArray();
+				for(int x=0;x<p.length;x++){
+					p[x]='_';
+				}
+			
+			i=0;
+			
+			for(int x=0;x<phrases[r].length();x=i+1){
+				i=phrases[r].indexOf(" ",x);
+				if(i>=0){
+					p[i]=' ';
+				}
+					else{
+				break;
+				}
+			}
+			for(int x=0;x<p.length;x++){
+				if(p[x]=='_'){
+					winner=false;
+					break;
+				}
+			}
+		while(!winner&&tries>0){
+
+			System.out.println(alpha);
+			for(int x=0; x<phrases[r].length(); x++){
+			System.out.print(p[x]+" ");	
+			}
+			System.out.println(" ");
+			
+			System.out.println("Guess a letter!");
+			guess=GetString();
+			
+			if(guess.charAt(0)=='a'){
+				alpha[0]='_';
+				}
+				else if(guess.charAt(0)=='b'){
+				alpha[1]='_';
+				}
+				else if(guess.charAt(0)=='c'){
+				alpha[2]='_';
+				}
+				else if(guess.charAt(0)=='d'){
+				alpha[3]='_';
+				}
+				else if(guess.charAt(0)=='e'){
+				alpha[4]='_';
+				}
+				else if(guess.charAt(0)=='f'){
+				alpha[5]='_';
+				}
+				else if(guess.charAt(0)=='g'){
+				alpha[6]='_';
+				}
+				else if(guess.charAt(0)=='h'){
+				alpha[7]='_';
+				}
+				else if(guess.charAt(0)=='i'){
+				alpha[8]='_';
+				}
+				else if(guess.charAt(0)=='j'){
+				alpha[9]='_';
+				}
+				else if(guess.charAt(0)=='k'){
+				alpha[10]='_';
+				}
+				else if(guess.charAt(0)=='l'){
+				alpha[11]='_';
+				}
+				else if(guess.charAt(0)=='m'){
+				alpha[12]='_';
+				}
+				else if(guess.charAt(0)=='n'){
+				alpha[13]='_';
+				}
+				else if(guess.charAt(0)=='o'){
+				alpha[14]='_';
+				}
+				else if(guess.charAt(0)=='p'){
+				alpha[15]='_';
+				}
+				else if(guess.charAt(0)=='q'){
+				alpha[16]='_';
+				}
+				else if(guess.charAt(0)=='r'){
+				alpha[17]='_';
+				}
+				else if(guess.charAt(0)=='s'){
+				alpha[18]='_';
+				}
+				else if(guess.charAt(0)=='t'){
+				alpha[19]='_';
+				}
+				else if(guess.charAt(0)=='u'){
+				alpha[20]='_';
+				}
+				else if(guess.charAt(0)=='v'){
+				alpha[21]='_';
+				}
+				else if(guess.charAt(0)=='w'){
+				alpha[22]='_';
+				}
+				else if(guess.charAt(0)=='x'){
+				alpha[23]='_';
+				}
+				else if(guess.charAt(0)=='y'){
+				alpha[24]='_';
+				}
+				else if(guess.charAt(0)=='z'){         
+				
+				alpha[25]='_';
+				}
+		
+			
+			ChangeArray(p,phrases[r],guess);
+			for(int x=0;x<p.length;x++){
+				}
+			
+			i=0;
+			
+			for(int x=0;x<phrases[r].length();x=i+1){
+				i=phrases[r].indexOf(guess,x);
+				if(i>=0){
+					p[i]=guess.charAt(0);
+				}
+					else{
+				break;
+				}
+			}
+			
+			if(phrases[r].indexOf(guess,0)>=0){
+				System.out.println();
+					for(int x=0;x<p.length;x++){
+						if(p[x]=='_'){
+							winner=false;
+							break;
+						}
+						else{
+							winner=true;
+						}
+					}
+				}
+				else{
+					tries=tries-1;
+					System.out.println("You have "+tries+" left.");
+				}
+		
+			}//Game
+			if(winner==true&&tries>0){
+				System.out.println("Congratulations! You've won!");
+			}
+			else if(tries==0){
+				System.out.println("You have lost! The phrase was "+phrases[r]+".");
+			}
+				
+			System.out.println("Would you like to play again?(y/n) ");
+			choice=GetString();
+			tries=6;
+			
+		alpha[0]='a';
+		alpha[1]='b';
+		alpha[2]='c';
+		alpha[3]='d';
+		alpha[4]='e';
+		alpha[5]='f';
+		alpha[6]='g';
+		alpha[7]='h';
+		alpha[8]='i';
+		alpha[9]='j';
+		alpha[10]='k';
+		alpha[11]='l';
+		alpha[12]='m';
+		alpha[13]='n';
+		alpha[14]='o';
+		alpha[15]='p';
+		alpha[16]='q';
+		alpha[17]='r';
+		alpha[18]='s';
+		alpha[19]='t';
+		alpha[20]='u';
+		alpha[21]='v';
+		alpha[22]='w';
+		alpha[23]='x';
+		alpha[24]='y';
+		alpha[25]='z';
+		
+		}//Continue	
+	}//Main	
+}//Class
