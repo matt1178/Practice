@@ -9,14 +9,23 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class Hangman : Form
     {
-        public Form1()
+        public Hangman()
         {
             InitializeComponent();
         }
 
-        //This is an easy way to update the answer box. Use like this: 'setEqual(c1, c2, c3, c4, c5);'
+        //A way for making a random number based off of System Time. -h3
+        void randomInt(int i1,int i2)
+        {
+            int wordSeed;
+
+            System.Random RandNum = new System.Random();
+            wordSeed = RandNum.Next(i1, i2);
+        }
+
+        //This is an easy way to update the answer box. Use like this: 'setEqual(c1, c2, c3, c4, c5);' -h3
         void setEqual(char a1, char a2, char a3, char a4, char a5)
         {
             answerBox1.Text = a1.ToString();
@@ -28,13 +37,19 @@ namespace WindowsFormsApplication1
 
         public void startButton_Click(object sender, EventArgs e)
         {
-            char c1 = 'E';
-            char c2 = 'D';
-            char c3 = 'C';
-            char c4 = 'B';
-            char c5 = 'A';
+            //This is where most code gets executed, so why keep it all in this event? I threw it out to a different method -h3
+            main();
+        }
 
-            setEqual(c1, c2, c3, c4, c5);
+        void main()
+        {
+            char c1;
+            char c2;
+            char c3;
+            char c4;
+            char c5;
+
+            pictureBox.Image = WindowsFormsApplication1.Properties.Resources.zeroW;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Form1
+    partial class Hangman
     {
         /// <summary>
         /// Required designer variable.
@@ -76,6 +76,7 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.Image = global::WindowsFormsApplication1.Properties.Resources.blank;
             this.pictureBox.Location = new System.Drawing.Point(218, 12);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(147, 194);
@@ -361,7 +362,7 @@
             this.yButton.Text = "Y";
             this.yButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -399,8 +400,8 @@
             this.Controls.Add(this.answerBox1);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.startButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Hangman";
+            this.Text = "Hangman";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
