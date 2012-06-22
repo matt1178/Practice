@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
+        //Note. Second branch?
         string c1;
         string c2;
         string c3;
