@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+//This is a secondary Branch. Use it for whatever.
+
 namespace WindowsFormsApplication1
 {
     public partial class Hangman : Form
@@ -15,7 +17,6 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        //Note. Second branch?
         string c1;
         string c2;
         string c3;
